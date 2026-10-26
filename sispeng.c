@@ -4,9 +4,6 @@
 #include <stdbool.h>
 #include "mahasiswa.h"
 
-#define USER "admin"
-#define PASS "admin123"
-
 int main(void) {
 
   char nama_kampus[48];
@@ -20,11 +17,11 @@ int main(void) {
 
   char user[48], pass[48];
   int kode_error = 0;
-  char *name = malloc(8 * sizeof(char *));
+  char *name = malloc(50 * sizeof(char));
 
   while (running) {
     printf("Masukkan Nama Anda: ");
-    scanf(" %[^\n]s", name);
+    scanf(" %49[^\n]s", name);
     system("clear");
     Mahasiswa *mh = buat_array_mahasiswa(jlh_mahasiswa);
     while (session_login) {
@@ -128,7 +125,6 @@ int main(void) {
               session_login = false;
               update_kampus = false;
               kode_error = 0;
-              free(mh);
               system("clear");
             } else {
               status = true;
@@ -138,6 +134,8 @@ int main(void) {
         }
       }
     }
+    free(mh);
   }  
+  free(name);
   return 0;
 }

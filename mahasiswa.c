@@ -98,7 +98,7 @@ void tambah_data_mahasiswa(Mahasiswa *mh, int *jlh_mahasiswa) {
   int size_data;
   printf("Tambah Data: ");
   scanf("%d", &size_data);
-  Mahasiswa *tmp = realloc(mh, (*jlh_mahasiswa * 3) * sizeof(Mahasiswa));
+  Mahasiswa *tmp = realloc(mh, (*jlh_mahasiswa + size_data) * sizeof(Mahasiswa));
   if (tmp != NULL) {
     mh = tmp;
     *jlh_mahasiswa += size_data;
