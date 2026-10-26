@@ -22,7 +22,7 @@ int sort_by_umur(const void *a, const void *b) {
 }
 
 Mahasiswa *buat_array_mahasiswa(int jlh_mahasiswa) {
-  return malloc( jlh_mahasiswa * sizeof(Mahasiswa));
+  return (Mahasiswa *)malloc( jlh_mahasiswa * sizeof(Mahasiswa));
 
 }
 
