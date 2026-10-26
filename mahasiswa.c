@@ -22,8 +22,12 @@ int sort_by_umur(const void *a, const void *b) {
 }
 
 Mahasiswa *buat_array_mahasiswa(int jlh_mahasiswa) {
-  return (Mahasiswa *)malloc( jlh_mahasiswa * sizeof(Mahasiswa));
-
+  Mahasiswa *mhs = (Mahasiswa *)malloc(jlh_mahasiswa * sizeof(Mahasiswa));
+  if (mhs == NULL) {
+    printf("hey, alokasi memori untuk buat array mahasiswa gagal!\n");
+    return NULL;
+  }
+  return mhs;
 }
 
 void cetak_data_mahasiswa(Mahasiswa *mhs, int jlh_mahasiswa, char *nama_kampus) {

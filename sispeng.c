@@ -18,6 +18,10 @@ int main(void) {
   char user[48], pass[48];
   int kode_error = 0;
   char *name = malloc(50 * sizeof(char));
+  if (name == NULL) {
+    printf("hey, alokasi memori untuk nama gagal!\n");
+    return 1;
+  }
 
   while (running) {
     printf("Masukkan Nama Anda: ");
