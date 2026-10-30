@@ -24,7 +24,7 @@ int sort_by_umur(const void *a, const void *b) {
 Mahasiswa *buat_array_mahasiswa(int jlh_mahasiswa) {
   Mahasiswa *mhs = (Mahasiswa *)malloc(jlh_mahasiswa * sizeof(Mahasiswa));
   if (mhs == NULL) {
-    printf("hey, alokasi memori untuk buat array mahasiswa gagal!\n");
+    fprintf(stderr, "hey, alokasi memori untuk array mahasiswa gagal!\n");
     return NULL;
   }
   return mhs;
@@ -93,9 +93,7 @@ void error_msg(int kode_error) {
     printf("Password Anda salah!\n");
   } else if (kode_error == 2) {
     printf("Username Anda salah!\n");
-  } else {
-    printf("");
-  }
+  } 
 }
 
 void tambah_data_mahasiswa(Mahasiswa *mh, int *jlh_mahasiswa) {
