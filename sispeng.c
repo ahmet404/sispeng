@@ -6,15 +6,9 @@
 
 int main(void) {
 
-  char nama_kampus[48];
-  static int jlh_mahasiswa = 0;
-  int menu;
-  int pilih;
   bool session_login = true;
   bool status = false;
   bool update_kampus = false;
-  char user[48], pass[48];
-  int kode_error = 0;
 
   char *name = malloc(50 * sizeof(char));
   if (name == NULL) {

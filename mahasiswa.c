@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include "mahasiswa.h"
 
+char nama_kampus[48];
+int jlh_mahasiswa = 0;
+int menu;
+int pilih;
+char user[48], pass[48];
+int kode_error = 0;
+
 int sort_by_ipk(const void *a, const void *b) {
   const Mahasiswa *x = a;
   const Mahasiswa *y = b;

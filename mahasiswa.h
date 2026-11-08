@@ -4,6 +4,14 @@
 #define USER "admin"
 #define PASS "admin123"
 
+extern char nama_kampus[48];
+extern int jlh_mahasiswa;
+extern int menu;
+extern int pilih;
+extern char user[48];
+extern char pass[48];
+extern int kode_error;
+
 typedef struct {
   char name[48];
   char jurusan[32];
